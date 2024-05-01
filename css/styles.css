@@ -1,8 +1,7 @@
 
-.container {
+#container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 256px);
+    grid-template-rows: repeat(5, 256px);
     gap: 20px;
 }
-
