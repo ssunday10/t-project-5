@@ -1,7 +1,20 @@
 
+body {
+    margin-inline: auto;
+    padding: 2px 23px 2px 30px;
+}
 #container {
     display: grid;
-    grid-template-columns: repeat(4, 256px);
-    grid-template-rows: repeat(5, 256px);
+    grid-template-columns: repeat(4, 220px);
+    grid-template-rows: repeat(5, 220px);
     gap: 20px;
+    padding: 10px;
+}
+
+input {
+    height: 30px;
+    width: 30vw;
+    margin: auto;
+    padding: 10px 10px;
+    border: 1px solid black;
 }
