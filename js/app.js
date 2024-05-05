@@ -1,22 +1,16 @@
-document.addEventListener('', function() {
-    baguetteBox.run('.gallery');
-});
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    baguetteBox.run('.gallery');
-        var inputField = document.getElementById('inputFieldId');
-        var thumbnailsContainer = document.getElementById('thumbnails');
+baguetteBox.run('.gallery');
 
-        inputField.addEventListener('keyup', function(event) {
-            if (event.target.value.length >= 3) { // Example condition
-                var thumbnails = thumbnailsContainer.getElementsByTagName('img');
-                for (var i = 0; i < thumbnails.length; i++) {
-                    thumbnails[i].addEventListener('click', function() {
-                        var mainImage = document.getElementsByTagName('a');
-                        mainImage.src = this.src.replace('thumbnail', 'fullsize');
-                    });
-                }
-            }
-        });
+const inputFieldId = document.getElementById('inputFieldId');
+ inputFieldId.addEventListener('keyup', e=> {
+    let currentValue = e.target.value.toLowerCase();
+    let captions =document.querySelectorAll('a.data-caption');
+    captions.forEach(captions => {
+        if (captions.textContent.toLowerCase().includes(currentValue)) {
+            captions.style.display = 'block';
+        } else {
+            captions.style.display = 'none';
+        }
+    });
 });
