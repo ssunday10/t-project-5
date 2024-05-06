@@ -1,16 +1,11 @@
-
-
+const search = new Filter('search', 'data-caption');
 baguetteBox.run('.gallery');
 
-const inputFieldId = document.getElementById('inputFieldId');
- inputFieldId.addEventListener('keyup', e=> {
+const search = document.getElementById('search');
+ search.addEventListener('keyup', e=> {
     let currentValue = e.target.value.toLowerCase();
-    let captions =document.querySelectorAll('a.data-caption');
-    captions.forEach(captions => {
-        if (captions.textContent.toLowerCase().includes(currentValue)) {
-            captions.style.display = 'block';
-        } else {
-            captions.style.display = 'none';
-        }
-    });
+        let captions =document.querySelectorAll('a');
+        captions.forEach(caption => {
+        console.log(caption.getAttribute("data-caption"));
+     });
 });
