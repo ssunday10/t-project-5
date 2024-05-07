@@ -1,16 +1,14 @@
 baguetteBox.run('.gallery');
 
-const search = document.getElementById('search', 'data-caption');
-search.addEventListener('keyup', e=> {
+const search = document.getElementById('search').addEventListener('keyup', e => {
    let currentValue = e.target.value.toLowerCase();
    let captions = document.querySelectorAll('a');
-   captions.forEach (caption => {
-       while ("search", caption.textContent.includes(currentValue)) {
-         return search, caption.parentNode.style.display = "block";
-       } 
-       console.log(caption.getAttribute("data-caption"));
-      });
+   captions.forEach (captions=> { 
+         if (search) {
+            return `${gallery}.show()`;
+          } else {
+               return `${gallery}.hide()`;
+          }
    });
-
-
-   
+   console.log(captions);
+});
