@@ -19,3 +19,10 @@ input {
     padding: 10px 10px;
     border: 1px solid black;
 }
+
+
+ 
+.gallery img:hover {
+    filter: drop-shadow(4px 4px 6px gray);
+    transform: scale(1.1);
+}
