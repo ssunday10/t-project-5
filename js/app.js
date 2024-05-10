@@ -8,11 +8,11 @@ const search = document.getElementById('search').addEventListener('keyup', (e) =
    let captions = document.querySelectorAll('a');
 
    captions.forEach((caption) => { 
-      let dataCaption = caption.getAttribute('data-caption');
-      if (currentValue === dataCaption) {
-          return "href".parentNode.style.display = "block";
+      let dataCaption = caption.getAttribute('data-caption').toLocaleLowerCase();
+      if(dataCaption.includes(currentValue)) {
+         caption.style.display = '';
       } else {
-         null;
+         caption.style.display = 'none';
       }
    });
 });
